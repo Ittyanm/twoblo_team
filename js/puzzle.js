@@ -1,9 +1,9 @@
 $(function(){
 	var setWrap = $('#container'),
 	setBase = $('.stageBase'),
-	scrollSpeed = 1000,
+	scrollSpeed = 987,
 	scrollEasing = 'swing',
-	slideSpeed = 500,
+	slideSpeed = 610,
 	slideEasing = 'linear',
 	downBtn = 'show', // 'show' or 'hide'
 	urlHash = 'on', // 'on' or 'off'
