@@ -90,6 +90,9 @@ h2 {
   margin-bottom: 3px;
   padding: 5px;
   border : 3px solid #000;
+  -webkit-border-radius: 50%;/* 50%でもOK */
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   background: rgba(152,150,164,0.5);
 }
 .stageBase .fieldWrap .puzzle_img{
@@ -99,7 +102,15 @@ h2 {
   margin-bottom: 3px;
   padding: 5px;
   border : 3px solid #000;
+  -webkit-border-radius: 50%;/* 50%でもOK */
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   background: rgba(152,150,164,0.5);
+}
+.stageBase .fieldWrap .puzzle_img img{
+  -webkit-border-radius: 50%;/* 50%でもOK */
+  -moz-border-radius: 50%; /* Firefox向け */
+  border-radius: 50%;
 }
 
 #stage1 {background:rgb(247, 201, 201);}
