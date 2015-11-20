@@ -6,243 +6,367 @@
   <meta name="viewport" content="user-scalable=0">
   <title>TwoBlo Class</title>
   <link rel="stylesheet" href="http://black-flag.net/data/css/reset.css">
-  <link rel="stylesheet" href="css/puzzle.css">
+  <link rel="stylesheet" href="../css/puzzle.css">
   <link href='https://fonts.googleapis.com/css?family=Plaster|Krona+One|Sonsie+One|Source+Sans+Pro|#|#' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]>
+  <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 </script>
 <![endif]-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/puzzle.js"></script>
+  <link rel="stylesheet" href="../css/pace-theme-big-counter.css">
+  <script>
+    paceOptions = {
+      elements: true
+    };
   </script>
-  <script type="text/javascript" src="js/puzzle.js">
+  <script src="../js/pace.js"></script>
+  <script>
+    function load(time) {
+      var x = new XMLHttpRequest()
+      x.open('GET', "http://localhost:5646/walter/" + time, true);
+      x.send();
+    };
+
+    load(20);
+    load(100);
+    load(500);
+    load(2000);
+    load(3000);
+
+    setTimeout(function () {
+      Pace.ignore(function () {
+        load(3100);
+      });
+    }, 4000);
+
+    Pace.on('hide', function () {
+      console.log('done');
+    });
   </script>
 </head>
 
 <body>
+  <script>
+    range.addEventListener('input', function () {
+      document.querySelector('.pace').classList.remove('pace-inactive');
+      document.querySelector('.pace').classList.add('pace-active');
+
+      document.querySelector('.pace-progress').setAttribute('data-progress-text', range.value + '%');
+      document.querySelector('.pace-progress').setAttribute('style', '-webkit-transform: translate3d(' + range.value + '%, 0px, 0px)');
+    });
+  </script>
   <div id="container">
-   
+
     <section id="stage1" class="stageBase">
-     
+
       <div class="fieldWrap">
         <h1>TwoBlo Team</h1>
         <p>ここは1ページ目</p>
-      </div><!--/.fieldWrap -->
-      
+      </div>
+      <!--/.fieldWrap -->
+
     </section>
-    
+    <!--/#stage1 -->
+
     <section id="stage2" class="stageBase">
-     
+
       <div class="fieldWrap">
         <p>ここは2ページ目</p>
-      </div><!--/.fieldWrap -->
-      
+      </div>
+      <!--/.fieldWrap -->
+
     </section>
-    
+    <!--/#stage2 -->
+
     <section id="stage3" class="stageBase">
-     
+
       <div class="stageSlide">
-      
-	    <div class="slidePanel">
-	      <div class="fieldWrap">
-	        <p>Div_puzzle【1】<br>
-	        padding 5px<br>
-	        margin-bottom 3px<br>
-	        width 100px~900px</p>
-	        <div class="puzzle" style="width: 100px;">width100px</div>
-	        <div class="puzzle" style="width: 200px;">width200px</div>
+
+        <div class="slidePanel">
+          <div class="fieldWrap">
+            <p>Div_puzzle【1】
+              <br> padding 5px
+              <br> margin-bottom 3px
+              <br> width 100px~900px</p>
+            <div class="puzzle" style="width: 100px;">width100px</div>
+            <div class="puzzle" style="width: 200px;">width200px</div>
             <div class="puzzle" style="width: 300px;">width300px</div>
-	        <div class="puzzle" style="width: 400px;">width400px</div>
-	        <div class="puzzle" style="width: 500px;">width500px</div>
-	        <div class="puzzle" style="width: 600px;">width600px</div>
-	        <div class="puzzle" style="width: 700px;">width700px</div>
-	        <div class="puzzle" style="width: 800px;">width800px</div>
-	        <div class="puzzle" style="width: 900px;">width900px</div>
-	    <!--<div class="puzzle" style="width: 1000px;">width1000px</div>
+            <div class="puzzle" style="width: 400px;">width400px</div>
+            <div class="puzzle" style="width: 500px;">width500px</div>
+            <div class="puzzle" style="width: 600px;">width600px</div>
+            <div class="puzzle" style="width: 700px;">width700px</div>
+            <div class="puzzle" style="width: 800px;">width800px</div>
+            <div class="puzzle" style="width: 900px;">width900px</div>
+            <!--<div class="puzzle" style="width: 1000px;">width1000px</div>
 	        <div class="puzzle" style="width: 1100px;">width1100px</div>
 	        <div class="puzzle" style="width: 1200px;">width1200px</div>
 	        <div class="puzzle" style="width: 1300px;">width1300px</div>
 	        <div class="puzzle" style="width: 1400px;">width1400px</div>-->
-	      </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
         <div class="slidePanel">
           <div class="fieldWrap" style="width: 952px; margin-left: auto;
            margin-right: auto;">
-            <p>Div_puzzle【2】<br>
-            padding 5px<br>
-            margin-left 3px<br>
-            margin-bottom 3px<br>
-            width&#43;height 100px</p>
+            <p>Div_puzzle【2】
+              <br> padding 5px
+              <br> margin-left 3px
+              <br> margin-bottom 3px
+              <br> width&#43;height 100px</p>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
             <div class="puzzle_tile" style="width: 100px;height: 100px;">
-            width100px<br>&#43;<br>height100px
+              width100px
+              <br>&#43;
+              <br>height100px
             </div>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
         <div class="slidePanel">
           <div class="fieldWrap" style="width: 957px; margin-left: auto;
            margin-right: auto;">
-            <p>Div_puzzle【img】<br>
-            padding 5px<br>
-            margin-left 3px<br>
-            margin-bottom 3px<br>
-            width&#43;height 300px&#43;225px</p>
+            <p>Div_puzzle【img】
+              <br> padding 5px
+              <br> margin-left 3px
+              <br> margin-bottom 3px
+              <br> width&#43;height 300px&#43;225px</p>
             <div class="puzzle_img" style="width: 300px;height: 225px;">
-            <img src="./img/IMGP1683.JPG" alt="" width="300px">
+              <img src="./img/IMGP1683.JPG" alt="" width="300px">
             </div>
             <div class="puzzle_img" style="width: 300px;height: 225px;">
-            <img src="./img/IMGP1700.JPG" alt="" width="300px">
+              <img src="./img/IMGP1700.JPG" alt="" width="300px">
             </div>
             <div class="puzzle_img" style="width: 300px;height: 225px;">
-            <img src="./img/IMGP1713.JPG" alt="" width="300px">
+              <img src="./img/IMGP1713.JPG" alt="" width="300px">
             </div>
             <div class="puzzle_img" style="width: 300px;height: 225px;">
-            <img src="./img/IMGP1728.JPG" alt="" width="300px">
+              <img src="./img/IMGP1728.JPG" alt="" width="300px">
             </div>
             <div class="puzzle_img" style="width: 300px;height: 225px;">
-            <img src="./img/IMGP1740.JPG" alt="" width="300px">
+              <img src="./img/IMGP1740.JPG" alt="" width="300px">
             </div>
             <div class="puzzle_img" style="width: 300px;height: 225px;">
-            <img src="./img/IMGP1683.JPG" alt="" width="300px">
+              <img src="./img/IMGP1683.JPG" alt="" width="300px">
             </div>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
-      </div><!--/.stageSlide -->
-      
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
+      </div>
+      <!--/.stageSlide -->
+
     </section>
-    
+    <!--/#stage3 -->
+
     <section id="stage4" class="stageBase">
-     
+
       <div class="stageSlide">
-       
+
         <div class="slidePanel">
           <div class="fieldWrap">
             <p>スライドエリア【1】</p>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
         <div class="slidePanel slideInitial">
           <div class="fieldWrap">
-            <p>ここは4ページ目<br>
-            スライドエリア【2】</p>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
+            <p>ここは4ページ目
+              <br> スライドエリア【2】
+            </p>
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
         <div class="slidePanel">
           <div class="fieldWrap">
             <p>スライドエリア【3】</p>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
-      </div><!--/.stageSlide -->
-      
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
+      </div>
+      <!--/.stageSlide -->
+
     </section>
-    
+    <!--/#stage4 -->
+
     <section id="stage5" class="stageBase">
       <div class="stageSlide">
-       
+
         <div class="slidePanel">
           <div class="fieldWrap">
             <p>スライドエリア【1】</p>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
         <div class="slidePanel">
           <div class="fieldWrap">
             <p>スライドエリア【2】</p>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+
         <div class="slidePanel">
           <div class="fieldWrap">
             <p>スライドエリア【3】</p>
-          </div><!--/.fieldWrap -->
-        </div><!--/.slidePanel -->
-        
-      <div class="slidePanel slideInitial">
-        <div class="fieldWrap">
-          <p>ここは5ページ目<br>
-          スライドエリア【4】</p>
-        </div><!--/.fieldWrap -->
-      </div><!--/.slidePanel -->
-      
-      <h2>COPYRIGHT &copy; <a href="https://github.com/Ittyanm/">TwoBlo&#43;Everyone</a> ALL RIGHTS RESERVED.
-      </h2>
-      
-      </div><!--/.stageSlide -->
-    </section>
-  
-</div><!--/#container-->
+          </div>
+          <!--/.fieldWrap -->
 
+        </div>
+        <!--/.slidePanel -->
+
+        <div class="slidePanel slideInitial">
+          <div class="fieldWrap">
+            <p>ここは5ページ目
+              <br> スライドエリア【4】
+            </p>
+          </div>
+          <!--/.fieldWrap -->
+
+        </div>
+        <!--/.slidePanel -->
+        <h2>COPYRIGHT &copy; <a href="https://github.com/Ittyanm/">TwoBlo&#43;Everyone</a> ALL RIGHTS RESERVED.
+      </h2>
+      </div>
+      <!--/.stageSlide -->
+    </section>
+    <!--/#stage5 -->
+  </div>
+  <!--/#container-->
 </body>
 </html>
