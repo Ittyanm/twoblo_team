@@ -48,6 +48,11 @@
 </head>
 
 <body>
+  <!--/.audio -->
+  <audio autoplay loop>
+    <source src="./song/bgm.mp3" type="audio/mpeg">
+    <source src="./song/bgm.wav" type="audio/wav">
+  </audio>
   <script>
     range.addEventListener('input', function () {
       document.querySelector('.pace').classList.remove('pace-inactive');
@@ -62,7 +67,21 @@
     <section id="stage1" class="stageBase">
 
       <div class="fieldWrap">
-        <h1>TwoBlo Team</h1>
+        <header>
+          <h1>TwoBlo Team</h1>
+          <nav>
+            <ul id="menu">
+              <li><a href="#!page1">page1</a></li>
+              <li><a href="#!page2">page2</a></li>
+              <li><a href="#!page3">page3</a></li>
+              <li><a href="#!page4">page4</a></li>
+              <li><a href="#!page5">page5</a></li>
+              <li><a id="facebook" href="https://www.facebook.com/ittyanm" target="_blank">Facebook</a></li>
+              <li><a class="twitter" href="https://twitter.com/Ittyanm/" target="_blank">Twitter</a></li>
+            </ul>
+          </nav>
+        </header>
+
         <img src="./img/photo_1.png" alt="" width="377" height="233">
         <img src="./img/photo_2.png" alt="" width="377" height="233">
         <img src="./img/photo_3.png" alt="" width="377" height="233">

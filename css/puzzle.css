@@ -18,45 +18,10 @@ body {
   visibility: hidden;
 }
 
-a:link {
-  text-decoration: nderline;
-  color: rgb(0, 0, 255);
-}
-
-a:visited {
-  text-decoration: nderline;
-  color: rgb(0, 0, 255);
-}
-
-a:active {
-  text-decoration: nderline;
-  color: rgb(0, 0, 255);
-}
-
-a:hover {
-  text-decoration: none;
-  color: rgb(0, 0, 255);
-}
-
 p {
   padding: 0 0 5px 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 21px;
-}
-
-h1 {
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  width: 100%;
-  background: rgba(29, 78, 137, 0.8);
-  color: rgb(255, 255, 255);
-  font-size: 21px;
-  font-family: 'Sonsie One', cursive;
-  font-weight: bold;
-  text-align: center;
-  position: fixed;
-  z-index: 1;
 }
 
 h2 {
@@ -67,6 +32,112 @@ h2 {
   font-size: 12px;
   position: absolute;
   font-family: 'Krona One', sans-serif;
+}
+
+
+/* header
+--------------------------- */
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 0px;
+  width: 100%;
+  height: 55px;
+  overflow: hidden;
+  background: #000;
+  position: fixed;
+  z-index: 1;
+  font-family: 'Sonsie One', cursive;
+}
+
+header h1 {
+  margin: 5px 55px;
+  padding: 13px;
+  background: rgba(29, 78, 137, 0.8);
+  color: rgb(255, 255, 255);
+  font-size: 21px;
+  font-weight: bold;
+  float: left;
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  /*●なし*/
+}
+
+nav li {
+  margin-top: 3px;
+  padding: 0px;
+  text-align: center;
+  float: left;
+}
+
+nav li a {
+  padding: 8px 8px 0px 8px;
+  margin: 13px 21px 0px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: rgb(29, 78, 137);
+  color: rgb(247, 201, 201);
+  display: block;
+  transition: 0.3s;
+}
+
+nav li a:hover {
+  background-color: rgb(247, 201, 201);
+  color: rgb(29, 78, 137);
+  border-bottom: 3px solid #f9f9f9;
+  transition: background-color 2s ease-out;
+  /*場所　時間　具合*/
+}
+
+.facebook {
+  padding: 8px 8px 0px 8px;
+  margin: 13px 21px 0px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: rgb(59, 89, 152);
+  color: rgb(247, 201, 201);
+  display: block;
+  transition: 0.3s;
+}
+
+.facebook:hover {
+  background-color: rgb(247, 201, 201);
+  color: rgb(59, 89, 152);
+  border-bottom: 3px solid #f9f9f9;
+  transition: background-color 2s ease-out;
+  /*場所　時間　具合*/
+}
+
+.twitter {
+  padding: 8px 8px 0px 8px;
+  margin: 13px 21px 0px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: rgb(85, 172, 238);
+  color: rgb(247, 201, 201);
+  display: block;
+  transition: 0.3s;
+}
+
+.twitter:hover {
+  background-color: rgb(247, 201, 201);
+  color: rgb(85, 172, 238);
+  border-bottom: 3px solid #f9f9f9;
+  transition: background-color 2s ease-out;
+  /*場所　時間　具合*/
 }
 
 
@@ -170,6 +241,26 @@ h2 {
   position: relative;
   overflow: hidden;
   visibility: hidden;
+}
+
+.stageSlide a:link {
+  text-decoration: nderline;
+  color: rgb(0, 0, 255);
+}
+
+.stageSlide a:visited {
+  text-decoration: nderline;
+  color: rgb(0, 0, 255);
+}
+
+.stageSlide a:active {
+  text-decoration: nderline;
+  color: rgb(0, 0, 255);
+}
+
+.stageSlide a:hover {
+  text-decoration: none;
+  color: rgb(0, 0, 255);
 }
 
 .stageSlide .slideWrap {
